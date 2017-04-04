@@ -1,0 +1,1212 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{002925A6-C411-471E-8FA9-D532690A1272}</ProjectGuid>
+        <MainSource>HWise32X.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">ReleaseBuild</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Library</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>18.1</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='ReleaseBuild' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_MajorVer>2</VerInfo_MajorVer>
+        <VerInfo_Build>19</VerInfo_Build>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_N>true</DCC_N>
+        <DCC_LocalDebugSymbols>true</DCC_LocalDebugSymbols>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_S>false</DCC_S>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_UnitSearchPath>$(DELPHI)\Lib;$(DELPHI)\RBuilder\Lib;..\..\Components\Third Party\RichView;..\..\Components\Third Party\VirtualTreeView\Source;..\..\Components\Third Party\VirtualTreeView;..\..\Common\Implementations;..\..\Common;..\..\Components\Third Party\TMS Diagram Studio\source\core;..\..\Components\Third Party\TMS Diagram Studio\source;..\..\Components\Third Party\TMS Diagram Studio;..\..\Components\Digital Ambience\DAUser;..\..\Common\Reports;..\..\Common\Frames;..\..\Components\Other;..\..\Common\Plugins;P:\Compiled\Delphi32\ActiveX;..\..\Components\Other;$(DELPHI)\Lib;P:\Compiled\Delphi32;..\;..\..\Components\Package;..\..\Components\Digital Ambience\DATimer;..\..\Components\Digital Ambience\DAButton;..\..\Common\Gallery;..\..\Common;..\..\Common\Repository;..\..\Common\Implementations;..\..\Components\Digital Ambience\DAQuestion;..\..\Components\Digital Ambience\DAUser;..\..\Common\Reports;..\..\Components\Digital Ambience\DASQL;..\..\Components\Digital Ambience\DAJump;..\..\Common\Article;..\..\Common\Coding\Frames;..\..\Components\Third Party\RichView;..\..\Common\Packet;..\..\Common\Frames;..\..\Common\Coding;..\..\Components\Digital Ambience\DAImage;..\..\Components\Digital Ambience\DASplitter;..\..\Common\Editing Interface;..\..\Common\Third Party\DIMime;..\..\Common\Plugins;..\..\Components\Third Party\RichView\RVXML;..\..\Components\Digital Ambience\MMTimes;..\..\Components\Third Party\GraphicEx;..\..\Components\Third Party\Gnostice\Shared\PDFProcessor\Model;..\..\Components\Third Party\Gnostice\Shared\PDFProcessor\Utils\Containers;..\..\Components\Third Party\Gnostice\Shared\PDFProcessor\Utils;..\..\Components\Third Party\Gnostice\Shared\PDFProcessor\ExportDevice;..\..\Components\Third Party\Gnostice\Shared\PDFProcessor\Base;..\..\Components\Third Party\Gnostice\Shared\PDFProcessor\Base\FileStructure;..\..\Components\Third Party\Gnostice\Shared\PDFProcessor\Base\Parser;..\..\Components\Third Party\Gnostice\PDFtoolkit VCL;..\..\Components\Third Party\NativeXML;..\..\Components\Third Party\NativeXML\general;..\..\Common\Third Party\FastMM;..\..\Components\Third Party\TMS Diagram Studio\source;..\..\Components\Third Party\DIRegEx\Source;..\..\Components\Third Party\Gnostice\PDFtoolkit VCL\Source;..\..\Components\Third Party\RBuilder\Source;..\..\Components\Third Party\RichView\TRichView\Source;..\..\Components\Third Party\RichView\TRichView\Source\Include;..\..\Components\Third Party\RichView\RichViewActions\Source;..\..\Components\Third Party\VirtualTreeView\Source;..\..\Components\Third Party\RichView;..\..\Components\Third Party\VirtualTreeView\Source;..\..\Components\Third Party\VirtualTreeView;..\..\Common\Implementations;..\..\Common;..\..\Components\Third Party\TMS Diagram Studio\source\core;..\..\Components\Third Party\TMS Diagram Studio\source;..\..\Components\Third Party\TMS Diagram Studio;..\..\Components\Digital Ambience\DAUser;..\..\Common\Reports;..\..\Common\Frames;..\..\Components\Other;..\..\Common\Plugins;..\Reports;..\..\Components\Third Party\RichView\SRVControls\Source;..\..\Components\Third Party\RichView\ScaleRichView\Source;..\..\Components\Third Party\RichView\ScaleRichView\Source\Include;..\..\Components\Third Party\RichView\RvXml\Source;..\..\Components\Third Party\RichView\RvHtmlImporter\Source;..\..\Common\Third Party;..\..\Components\Third Party\RichView\RichViewActions\Source\Include;..\..\Components\Third Party\TMS Component Pack;..\..\Components\Third Party\Gnostice\Shared\PdfProcessor\Stream;..\..\Components\Third Party\Gnostice\Shared\PdfProcessor\Logger;..\..\Components\Third Party\Gnostice\Shared\PdfProcessor\Stream\Zlib;..\..\Components\Third Party\Gnostice\Shared\PdfProcessor\FontProcessor\Source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_WriteableConstants>true</DCC_WriteableConstants>
+        <DCC_UsePackage>VCL40;VCLX40;VCLDB40;VCLDBX40;VCLSMP40;QRPT40;TEEUI40;TEEDB40;TEE40;DSS40;ibevnt40;VCLMID40;NMFAST40;INETDB40;INET40;Vcl50;vcl;vclx;vcldb;rbRCL66;rtl;dbrtl;dxDBEdD6;EQGridD6;ECQDBCD6;EQTLD6;dxGridEx;rbRCL76;gtDocEngD6;IndyCore60;IndySystem60;IndyProtocols60;xmlrtl;bdertl;TeeDB56;Tee56;gtRichVwExpD6;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_Locale>7177</VerInfo_Locale>
+        <VerInfo_Debug>true</VerInfo_Debug>
+        <DCC_K>false</DCC_K>
+        <DCC_AssertionsAtRuntime>false</DCC_AssertionsAtRuntime>
+        <DCC_DcpOutput>P:\Projects\Components\Package</DCC_DcpOutput>
+        <DCC_BplOutput>P:\Projects\Components\Package</DCC_BplOutput>
+        <DCC_F>false</DCC_F>
+        <DCC_E>false</DCC_E>
+        <SanitizedProjectName>HWise32X</SanitizedProjectName>
+        <DCC_DcuOutput>p:\compiled\delphi32\ActiveX</DCC_DcuOutput>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DebugSourcePath>$(DELPHI)\Lib;$(DELPHI)\RBuilder\Source;$(DELPHI)\DevExpress\Lib;..\..\..\Components\Other;..\..\..\Components\Package;..\..\..\Components\Digital Ambience\DAButton;..\..\..\..\Common\Gallery;..\..\..\Components\Digital Ambience\DAFind;..\..\..\Components\Digital Ambience\DBPicker;..\..\..\Components\Digital Ambience\DACombo;..\;..\..\..\Common;..\..\..\Common\Repository;..\..\Implementations\IBX;..\..\..\Common\Implementations;..\..\..\Components\Digital Ambience\DAQuestion;..\..\..\Components\Digital Ambience\DAUser;..\..\Reports;..\..\..\Common\Reports;..\..\..\Components\Digital Ambience\DAJump;..\..\..\Common\Article;..\..\..\Common\Coding;..\..\..\Components\Third Party\RichView;..\..\..\Components\Third Party\RichView\Actions;P:\Compiled\Delphi32;..\..\..\Components\Third Party\TeeChart;..\..\..\Components\Digital Ambience\MMTimes;..\..\..\Components\Digital Ambience\mru column ex;..\..\Implementations\ADO;..\..\..\Components\Third Party\ASTA;..\..\..\..\Common\Third Party\DIMime;$(DebugSourcePath)</DebugSourcePath>
+        <DCC_Description>DXS/COM Common Controls</DCC_Description>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Winapi;Vcl;System.Win;IW.IWP;FMXTee.Editor;Xml.Internal;Vcl.Imaging;Androidapi;IBX;Data.Win;Androidapi.JNI;FireDAC.VCLUI;IW.HTTP;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_ExeOutput>p:\compiled\delphi32\HealthWise</DCC_ExeOutput>
+        <DCC_Define>ACTIVEX;IBX;ADO;HTMLHELP;SCALE_RV;$(DCC_Define)</DCC_Define>
+        <VerInfo_Keys>CompanyName=DXS Ltd.;FileDescription=DXS Point-of-Care;FileVersion=4.5.0.187;InternalName=DXS Components;LegalCopyright=Copyright © 1998-2012, DXS Ltd.  All Rights Reserved;LegalTrademarks=DXS(tm) and the DXS logo are trademarks of DXS Ltd.;OriginalFilename=HWise;ProductName=DXS PoC;ProductVersion=4.3.2.0;Comments=Use of these components is subject to a license agreement between DXS Ltd. and the applicant.  Any use outside such an agreement is a direct infringement on the owner&apos;s rights and will be prosecuted to the maximum extent possible by law.;OleSelfRegister=1;PrivateBuild=</VerInfo_Keys>
+        <DCC_Optimize>false</DCC_Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Icon_MainIcon>C:\workspace1\Products\HealthWise\OCX\HWise32X_Icon.ico</Icon_MainIcon>
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
+        <VerInfo_MajorVer>5</VerInfo_MajorVer>
+        <VerInfo_MinorVer>0</VerInfo_MinorVer>
+        <VerInfo_Build>0</VerInfo_Build>
+        <Manifest_File>None</Manifest_File>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_Namespace>Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <OutputExt>dll</OutputExt>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <DCC_UsePackage>adortl;VirtualTreesR;vclimg;$(DCC_UsePackage)</DCC_UsePackage>
+        <Icon_MainIcon>C:\workspace1\Products\HealthWise\HWise32X_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <VerInfo_Debug>false</VerInfo_Debug>
+        <VerInfo_Build>17</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=DXS Ltd.;FileDescription=DXS Point-Of-Care;FileVersion=5.0.1.17;InternalName=DXS Components;LegalCopyright=Copyright © 1998-2016, DXS Ltd.  All Rights Reserved;LegalTrademarks=DXS(tm) and the DXS logo are trademarks of DXS Ltd.;OriginalFilename=Hwise;ProductName=DXS PoC;ProductVersion=5.0.0.50;Comments=Use of these components is subject to a license agreement between DXS Ltd. and the applicant.  Any use outside such an agreement is a direct infringement on the owner&apos;s rights and will be prosecuted to the maximum extent possible by law.</VerInfo_Keys>
+        <DCC_Optimize>false</DCC_Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_OutputDRCFile>true</DCC_OutputDRCFile>
+        <VerInfo_MajorVer>5</VerInfo_MajorVer>
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
+        <VerInfo_Build>50</VerInfo_Build>
+        <DCC_DebugInfoInExe>false</DCC_DebugInfoInExe>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_Keys>CompanyName=DXS Ltd.;FileDescription=DXS Point-of-Care;FileVersion=5.0.0.50;InternalName=DXS Components;LegalCopyright=Copyright © 1998-2016, DXS Ltd.  All Rights Reserved;LegalTrademarks=DXS(tm) and the DXS logo are trademarks of DXS Ltd.;OriginalFilename=HWise;ProductName=DXS PoC;ProductVersion=1.0.0.0;Comments=Use of these components is subject to a license agreement between DXS Ltd. and the applicant.  Any use outside such an agreement is a direct infringement on the owner&apos;s rights and will be prosecuted to the maximum extent possible by law.</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_UseMSBuildExternally>true</DCC_UseMSBuildExternally>
+        <VerInfo_Keys>CompanyName=DXS Ltd.;FileDescription=DXS Point-of-Care;FileVersion=5.0.0.2;InternalName=DXS Components;LegalCopyright=Copyright © 1998-2016, DXS Ltd.  All Rights Reserved;LegalTrademarks=DXS(tm) and the DXS logo are trademarks of DXS Ltd.;OriginalFilename=HWise;ProductName=DXS PoC;ProductVersion=5.0.5.212;Comments=Use of these components is subject to a license agreement between DXS Ltd. and the applicant.  Any use outside such an agreement is a direct infringement on the owner&apos;s rights and will be prosecuted to the maximum extent possible by law.</VerInfo_Keys>
+        <VerInfo_Build>2</VerInfo_Build>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_Optimize>false</DCC_Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_MajorVer>5</VerInfo_MajorVer>
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
+        <Debugger_HostApplication>P:\compiled\delphi32\HealthWise\HWise32.exe</Debugger_HostApplication>
+        <VerInfo_Debug>false</VerInfo_Debug>
+        <DCC_GenerateStackFrames>false</DCC_GenerateStackFrames>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <DCC_MapFile>3</DCC_MapFile>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+        <DCC_DebugInfoInTds>true</DCC_DebugInfoInTds>
+        <DCC_AssertionsAtRuntime>true</DCC_AssertionsAtRuntime>
+        <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=DXS Ltd.;FileDescription=DXS Point-of-Care;FileVersion=5.0.0.2;InternalName=DXS Components;LegalCopyright=Copyright © 1998-2016, DXS Ltd.  All Rights Reserved;LegalTrademarks=DXS(tm) and the DXS logo are trademarks of DXS Ltd.;OriginalFilename=HWise;ProductName=DXS PoC;ProductVersion=5.0.5.212;Comments=Use of these components is subject to a license agreement between DXS Ltd. and the applicant.  Any use outside such an agreement is a direct infringement on the owner&apos;s rights and will be prosecuted to the maximum extent possible by law.</VerInfo_Keys>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <RcCompile Include="HWise32X_ver.rc">
+            <Form>HWise32X_ver.res</Form>
+        </RcCompile>
+        <RcCompile Include="ActiveX.rc">
+            <Form>ActiveX.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\..\Glyphs\Large\LargePNG.rc">
+            <Form>LargePNG.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\..\Glyphs\Medium\MediumPNG.rc">
+            <Form>MediumPNG.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\..\Glyphs\Small\SmallPNG.rc">
+            <Form>SmallPNG.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\..\Glyphs\Tiny\TinyPNG.rc">
+            <Form>TinyPNG.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\..\Glyphs\Medium\MediumRepliesPNG.rc">
+            <Form>MediumRepliesPNG.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\..\Glyphs\Small\SmallRepliesPNG.rc">
+            <Form>SmallRepliesPNG.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\..\Glyphs\Editor\EditorPNG.rc">
+            <Form>EditorPNG.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\HealthWise.rc">
+            <Form>HealthWise.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\Cake.rc">
+            <Form>Cake.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\Transfer.rc">
+            <Form>Transfer.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\Common.rc">
+            <Form>Common.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\PIL.rc">
+            <Form>PIL.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\CPD.rc">
+            <Form>CPD.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\Products.rc">
+            <Form>Products.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\Service.rc">
+            <Form>Service.res</Form>
+        </RcCompile>
+        <RcCompile Include="..\Resources\Isabel.rc">
+            <Form>Isabel.res</Form>
+        </RcCompile>
+        <DCCReference Include="..\..\Common\DAProfiler.pas"/>
+        <DCCReference Include="..\..\Common\DXS.Common.pas"/>
+        <DCCReference Include="..\Thumbs.pas"/>
+        <DCCReference Include="..\..\Common\Find\Find.pas">
+            <Form>FindForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\BrowseIntf.pas"/>
+        <DCCReference Include="..\CPD.pas"/>
+        <DCCReference Include="..\PIL.pas"/>
+        <DCCReference Include="..\BillBoard.pas"/>
+        <DCCReference Include="..\MailOptions.pas">
+            <Form>MailOptionsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PrintOptions.pas">
+            <Form>PrintOptionsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Packet\LaunchZIP.pas"/>
+        <DCCReference Include="..\..\Common\Packet\LaunchDIFF.pas"/>
+        <DCCReference Include="..\..\Common\Packet\LaunchAPI.pas"/>
+        <DCCReference Include="..\..\Common\Packet\rLaunchAPI.pas"/>
+        <DCCReference Include="..\..\Common\Packet\Packet.pas"/>
+        <DCCReference Include="..\..\Common\Packet\aDIFF.pas"/>
+        <DCCReference Include="..\..\Common\Gallery\dmCustom.pas">
+            <Form>CustomData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\IMGTools.pas"/>
+        <DCCReference Include="..\..\Common\DAWeb.pas"/>
+        <DCCReference Include="..\..\Common\Resource.pas">
+            <Form>resCommon</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\rResource.pas"/>
+        <DCCReference Include="..\..\Common\Help\HH.pas"/>
+        <DCCReference Include="..\..\Common\Help\HH_ITS.pas"/>
+        <DCCReference Include="..\..\Common\Help\HH_Funcs.pas"/>
+        <DCCReference Include="..\Log.pas">
+            <Form>LogForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Cake\DACake.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\FindServer.pas">
+            <Form>FindServerForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Cake\ADOCake.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\ADOConnections.pas">
+            <Form>ADOConnectionsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Implementations\ADOFindServer.pas">
+            <Form>ADOFindServerForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Implementations\DataIntf.pas"/>
+        <DCCReference Include="..\..\Common\DataCache.pas"/>
+        <DCCReference Include="..\..\Common\Coding\Frames\fCodeBrowse.pas">
+            <Form>frCodeBrowse</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Coding\CodeBrowse.pas">
+            <Form>CodeBrowseForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Coding\CodeImpl.pas"/>
+        <DCCReference Include="..\..\Common\Coding\CodeIntf.pas"/>
+        <DCCReference Include="..\..\Common\Coding\FindCode.pas">
+            <Form>FindCodeForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Coding\CodeDetails.pas"/>
+        <DCCReference Include="..\..\Common\Help\HelpViewer.pas">
+            <Form>HelpViewerForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fCodeFind.pas">
+            <Form>frCodeFind</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Content.pas"/>
+        <DCCReference Include="..\dmContent.pas">
+            <Form>dmCustomContent</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Update.pas"/>
+        <DCCReference Include="..\Products.pas"/>
+        <DCCReference Include="..\Service.pas"/>
+        <DCCReference Include="..\Outdated.pas">
+            <Form>OutdatedForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Expired.pas">
+            <Form>ExpiredForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Source.pas"/>
+        <DCCReference Include="..\Profile.pas"/>
+        <DCCReference Include="..\dmPIL.pas">
+            <Form>PILData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\dmCPD.pas">
+            <Form>CPDData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\dmProduct.pas">
+            <Form>ProductData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\dmService.pas">
+            <Form>ServiceData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\dmForms.pas">
+            <Form>FormsData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\MedForms.pas"/>
+        <DCCReference Include="..\vMain.pas">
+            <Form>MainViewForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\DXSRes.pas">
+            <Form>resDXS</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="HWActive.pas"/>
+        <DCCReference Include="..\dmProfile.pas">
+            <Form>ProfileData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\SchemaCheck.pas">
+            <Form>SchemaCheckForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Implementations\HWImp.pas"/>
+        <DCCReference Include="..\Localisation\HWLocal.pas"/>
+        <DCCReference Include="..\rSettings.pas"/>
+        <DCCReference Include="..\rKeyboard.pas"/>
+        <DCCReference Include="..\dmSource.pas">
+            <Form>SourceData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Broadcast.pas"/>
+        <DCCReference Include="..\COM\COMUtil.pas"/>
+        <DCCReference Include="..\..\Common\Gallery\DAForm.PAS">
+            <Form>DAForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Gallery\DAStd.pas">
+            <Form>DAStdForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Gallery\DAStdB.pas">
+            <Form>DAFormB</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Find\FindIntf.pas"/>
+        <DCCReference Include="..\Upgrade.pas">
+            <Form>UpgradeForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Implementations\ADO\dmADOProfile.pas">
+            <Form>ADOProfileData</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\NotesIntf.pas"/>
+        <DCCReference Include="..\LiteratureIntf.pas"/>
+        <DCCReference Include="..\IllustrationIntf.pas"/>
+        <DCCReference Include="..\Views\fViewer.pas">
+            <Form>frViewer</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fSummary.pas">
+            <Form>frSummary</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fLiterature.pas">
+            <Form>frLiterature</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fSumLiterature.pas">
+            <Form>frSummaryLiterature</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fIllustration.pas">
+            <Form>frIllustration</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\BillboardIntf.pas"/>
+        <DCCReference Include="..\AlertIntf.pas"/>
+        <DCCReference Include="..\..\Common\Gallery\fBase.pas">
+            <Form>frBase</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\HWTypes.pas"/>
+        <DCCReference Include="..\Frames\fNotes.pas">
+            <Form>frNotes</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Views\ImageZoom.pas">
+            <Form>ImageZoomForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\QuestionIntf.pas"/>
+        <DCCReference Include="..\Frames\fQuestionnaire.pas">
+            <Form>frQuestionnaire</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\BookmarkIntf.pas"/>
+        <DCCReference Include="..\Frames\fBookmarks.pas">
+            <Form>frBookmarks</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fRequests.pas">
+            <Form>frRequests</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fReplies.pas">
+            <Form>frReplies</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reply.pas">
+            <Form>ReplyForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Components\Third Party\TMS Diagram Studio\PathUtils.pas"/>
+        <DCCReference Include="..\..\Components\Third Party\TMS Diagram Studio\PathBlocks.pas"/>
+        <DCCReference Include="..\..\Common\Article\Viewer.pas">
+            <Form>ViewerForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Article\Editor.pas">
+            <Form>EditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\WhiteboardEditor.pas">
+            <Form>WhiteboardEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Whiteboard.pas">
+            <Form>WhiteBoardForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\HWConst.pas"/>
+        <DCCReference Include="..\RequestsIntf.pas"/>
+        <DCCReference Include="..\TestOrg.pas">
+            <Form>TestOrganiseForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Frames\fInfoBar.pas">
+            <Form>frInfoBar</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Frames\fRegistration.pas">
+            <Form>frRegistration</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Specifiers.pas">
+            <Form>SpecifiersForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Indicator.pas">
+            <Form>IndicatorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Tests.pas"/>
+        <DCCReference Include="..\Literature.pas">
+            <Form>LiteratureForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\ViewerIntf.pas"/>
+        <DCCReference Include="..\ReplyWizard.pas">
+            <Form>ReplyWizardForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Wizard.pas">
+            <Form>WizardForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Reports\rReport.pas">
+            <Form>Report</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Reports\rAddress.pas">
+            <Form>repAddress</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rSummary.pas">
+            <Form>repSummary</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rReplies.pas">
+            <Form>repReplies</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rContent.pas">
+            <Form>repContent</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rNotes.pas">
+            <Form>repNotes</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rIllustration.pas">
+            <Form>repIllustration</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\DrugIntf.pas"/>
+        <DCCReference Include="..\..\Common\Reports\Reports.pas"/>
+        <DCCReference Include="..\Reports\rQuestionnaire.pas">
+            <Form>repQuestionnaire</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rLiterature.pas">
+            <Form>repLiterature</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\HWUtils.pas"/>
+        <DCCReference Include="..\HWConfig.pas"/>
+        <DCCReference Include="..\About.pas">
+            <Form>AboutForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\SourceIntf.pas"/>
+        <DCCReference Include="..\ProfileIntf.pas"/>
+        <DCCReference Include="..\MaintenanceIntf.pas"/>
+        <DCCReference Include="..\Security.pas"/>
+        <DCCReference Include="..\ContentProperties.pas">
+            <Form>ContentPropForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rService.pas">
+            <Form>repService</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rRequests.pas">
+            <Form>repRequests</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Diagnosis.pas">
+            <Form>DiagnosisForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fBrowser.pas">
+            <Form>frBrowser</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Organise.pas">
+            <Form>OrganiseForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Frames\fPrinter.pas">
+            <Form>frPrinter</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\HWLogon.pas">
+            <Form>HWLogonForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\HWLogoff.pas">
+            <Form>HWLogoffForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Frames\fProxy.pas">
+            <Form>frProxyFrame</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Preferences.pas">
+            <Form>PreferencesForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Connection.pas">
+            <Form>ConnectionForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Scripting\ScriptPrinter.pas">
+            <Form>ScriptPrinterForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fFormularies.pas">
+            <Form>frFormularies</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fScripting.pas">
+            <Form>frScripting</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fMailSetup.pas">
+            <Form>frMailSetup</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fDefaultSub.pas">
+            <Form>frDefaultSub</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fDefaultProvider.pas">
+            <Form>frDefaultProvider</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\DefaultProvider.pas">
+            <Form>DefaultProviderForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\FormularyIntf.pas"/>
+        <DCCReference Include="..\KeyList.pas"/>
+        <DCCReference Include="..\Generics.pas">
+            <Form>GenericsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Alert.pas">
+            <Form>AlertForm</Form>
+        </DCCReference>
+        <DCCReference Include="HWise32X_TLB.pas"/>
+        <DCCReference Include="BillboardImpl.pas"/>
+        <DCCReference Include="..\..\Components\Digital Ambience\DAImage\ListImage.pas"/>
+        <DCCReference Include="..\..\Components\Digital Ambience\DAImage\ResImgList.pas"/>
+        <DCCReference Include="..\..\Components\Digital Ambience\DAJump\JumpBar.pas"/>
+        <DCCReference Include="..\..\Common\Tokens.pas"/>
+        <DCCReference Include="..\..\Components\Third Party\RichView\RVUtils.pas"/>
+        <DCCReference Include="..\..\Common\XMLUtils.pas"/>
+        <DCCReference Include="..\..\Components\Third Party\TMS Diagram Studio\RVBlocks.pas"/>
+        <DCCReference Include="..\..\Components\Third Party\TMS Diagram Studio\ppDiagram.pas"/>
+        <DCCReference Include="..\..\Components\Third Party\Gnostice\PDFToolkit VCL\gtppPDF.pas"/>
+        <DCCReference Include="..\Subscribe.pas"/>
+        <DCCReference Include="..\SubscriptionIntf.pas"/>
+        <DCCReference Include="..\Reports\rSubscription.pas">
+            <Form>repSubscription</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Site.pas">
+            <Form>SiteForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rSite.pas">
+            <Form>repSite</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Users.pas">
+            <Form>UsersForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Password.pas">
+            <Form>PasswordForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rPassword.pas">
+            <Form>repPassword</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Add.pas">
+            <Form>AddUserForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\AddSite.pas">
+            <Form>AddSiteForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Company.pas">
+            <Form>CompanyForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\InteractionIntf.pas"/>
+        <DCCReference Include="..\Frames\fInteractions.pas">
+            <Form>frInteractions</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rInteractions.pas">
+            <Form>repInteractions</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fLabeller.pas">
+            <Form>frLabeller</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Image\LabelColor.pas">
+            <Form>LabelColorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Image\ImageSize.pas">
+            <Form>ImageSizeForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rMultiContent.pas">
+            <Form>repMultiContent</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Plugins\PlugUtils.pas"/>
+        <DCCReference Include="..\FlagUtils.pas"/>
+        <DCCReference Include="..\Fields.pas"/>
+        <DCCReference Include="..\Sample.pas">
+            <Form>SampleForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\SampleIntf.pas"/>
+        <DCCReference Include="..\TestConnect.pas">
+            <Form>TestConnectForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\AuditImpl.pas"/>
+        <DCCReference Include="..\AuditIntf.pas"/>
+        <DCCReference Include="..\TermIntf.pas"/>
+        <DCCReference Include="..\EditorIntf.pas"/>
+        <DCCReference Include="..\..\Common\Plugins\Status.pas">
+            <Form>StatusForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Plugins\Distribute.pas">
+            <Form>DistributeStatusForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Plugins\Busy.pas">
+            <Form>BusyForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\License.pas">
+            <Form>LicenseForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rSign.pas">
+            <Form>repSign</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Implementations\rDataIntf.pas"/>
+        <DCCReference Include="..\Support.pas">
+            <Form>SupportForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Notify.pas">
+            <Form>NotifyForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\ContentUtils.pas"/>
+        <DCCReference Include="..\AddContent.pas">
+            <Form>AddContentForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\ImpContent.pas">
+            <Form>ImportContentForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Borrow.pas">
+            <Form>BorrowForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\RegisterUser.pas">
+            <Form>RegisterUserForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\RegisterSite.pas">
+            <Form>RegisterSiteForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sites.pas">
+            <Form>SitesForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\FormAdd.pas">
+            <Form>AddForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\FormSubmit.pas">
+            <Form>SubmitForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Prompt.pas">
+            <Form>PromptForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Resolve.pas">
+            <Form>ResolveForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PackIntf.pas"/>
+        <DCCReference Include="..\Frames\fPacks.pas">
+            <Form>frPacks</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rPacks.pas">
+            <Form>repPacks</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\Frames\fFindBar.pas">
+            <Form>frFindBar</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fAlert.pas">
+            <Form>frAlert</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fGroup.pas">
+            <Form>frGroup</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fToday.pas">
+            <Form>frToday</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fHelp.pas">
+            <Form>frHelp</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fPDP.pas">
+            <Form>frPDP</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fIsabel.pas">
+            <Form>frIsabel</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Reports\rIsabel.pas">
+            <Form>repIsabel</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fCodeFlagging.pas">
+            <Form>frCodeFlagging</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fIntervention.pas">
+            <Form>frIntervention</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\InterventionIntf.pas"/>
+        <DCCReference Include="..\Intervention.pas">
+            <Form>InterventionForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fAlerting.pas">
+            <Form>frAlerting</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Frames\fFormsLog.pas">
+            <Form>frFormsLog</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\AdminSettings.pas">
+            <Form>AdminSettingsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\TreeUtils.pas"/>
+        <DCCReference Include="..\..\Common\CtrlUtils.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\DataUtils.pas"/>
+        <DCCReference Include="..\..\Common\ArrayUtils.pas"/>
+        <DCCReference Include="..\..\Common\InputUtils.pas"/>
+        <DCCReference Include="..\..\Common\Help\HelpUtils.pas"/>
+        <DCCReference Include="..\..\Common\MailSetup.pas">
+            <Form>MailSetupForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Common\MailSend.pas">
+            <Form>MailSendForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\SFLogic.pas"/>
+        <DCCReference Include="..\HistoryUtils.pas"/>
+        <DCCReference Include="..\Libraries\Auditing\LatticeLog_TLB.pas"/>
+        <DCCReference Include="..\LoggerIntf.pas"/>
+        <DCCReference Include="..\LoggerImpl.pas"/>
+        <DCCReference Include="..\LogConst.pas"/>
+        <DCCReference Include="..\LogUtils.pas"/>
+        <DCCReference Include="..\Applications\Upgrade Service\UpgradeConst.pas"/>
+        <DCCReference Include="..\Attributes.pas"/>
+        <DCCReference Include="ContentImpl.pas"/>
+        <DCCReference Include="MedProfileImpl.pas"/>
+        <DCCReference Include="MedUpdateImpl.pas"/>
+        <DCCReference Include="MedSourceImpl.pas"/>
+        <DCCReference Include="MedCPDImpl.pas"/>
+        <DCCReference Include="MedPILImpl.pas"/>
+        <DCCReference Include="MedProductImpl.pas"/>
+        <DCCReference Include="MedServiceImpl.pas"/>
+        <DCCReference Include="MedCodeFindImpl.pas"/>
+        <DCCReference Include="MedCodeBrowseImpl.pas"/>
+        <DCCReference Include="..\Implementations\IBX\dmIBXCPD.pas"/>
+        <DCCReference Include="..\Implementations\IBX\dmIBXForms.pas"/>
+        <DCCReference Include="..\Implementations\IBX\dmIBXProduct.pas"/>
+        <DCCReference Include="..\Implementations\IBX\dmIBXProfile.pas"/>
+        <DCCReference Include="..\Implementations\IBX\dmIBXService.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\IBXAdvanced.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\IBXConnections.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\IBXFindServer.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\IBXUtils.pas"/>
+        <DCCReference Include="..\..\Common\Cake\IBXCake.pas"/>
+        <DCCReference Include="..\..\Common\Implementations\IBX.IBIntf.pas"/>
+        <DCCReference Include="..\..\Common\LangUtils.pas"/>
+        <DCCReference Include="..\HealthCheck.pas"/>
+        <RcCompile Include="..\..\..\Scripts\Cake\Resource\HealthWise.rc">
+            <Form>HealthWise.res</Form>
+        </RcCompile>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="ReleaseBuild">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">HWise32X.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k230.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp230.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+            <Deployment Version="2">
+                <DeployFile LocalName="p:\compiled\delphi32\HealthWise\HWise32X.rsm" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteName>HWise32X.rsm</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="p:\compiled\delphi32\HealthWise\HWise32X.dll" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>HWise32X.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="p:\compiled\delphi32\HealthWise\HWise32X.dll" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>HWise32X.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="p:\compiled\delphi32\HealthWise\HWise32X.dll" Configuration="ReleaseBuild" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>HWise32X.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="ProjectiOSDeviceResourceRules"/>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClassesDexFile">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch768">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeX86File">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\x86</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1024">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch320">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSInfoPList"/>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1536">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640x1136">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements"/>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXInfoPList"/>
+                <DeployClass Name="ProjectOSXEntitlements"/>
+                <DeployClass Name="iPad_Launch2048">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+            </Deployment>
+            <ActiveXProjectInfo>
+                <version>1</version>
+            </ActiveXProjectInfo>
+            <ModelSupport>False</ModelSupport>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>
